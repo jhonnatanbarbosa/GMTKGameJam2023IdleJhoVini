@@ -8,14 +8,9 @@ public class SpawnManager : MonoBehaviour
     [SerializeField] private GameObject prefab;
     public float time;
     public float timeToSpawn;
-    public void Update()
+    public void Spawna()
     {
-        time += Time.deltaTime;
-        if(time > timeToSpawn)
-        {
-            time = 0f;
-            StartCoroutine(Spawn());
-        }
+        StartCoroutine(Spawn());
     }
 
     IEnumerator Spawn()
